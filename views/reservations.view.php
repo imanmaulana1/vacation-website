@@ -26,6 +26,24 @@
     <?php include 'partials/header.php' ?>
 
     <main>
+        <?php if (isset($_GET['message'])): ?>
+            <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+                <div id="liveToast" class="toast custom-toast bg-white" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <span class="material-symbols-outlined me-2 <?= $_GET['message'] == 'deleted successfully' ? 'text-success' : 'text-danger' ?>">
+                            <?= $_GET['message'] == 'deleted successfully' ? 'check_circle' : 'error' ?>
+                        </span>
+                        <strong class="me-auto <?= $_GET['message'] == 'deleted successfully' ? 'text-success' : 'text-danger' ?>">
+                            <?= $_GET['message'] == 'deleted successfully' ? 'Success' : 'Failed' ?>
+                        </strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        <?= $_GET['message'] == 'deleted successfully' ? 'Item deleted successfully!' : 'Item deletion failed!' ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
         <div class="container px-2 px-lg-5">
             <div class="row pt-5">
                 <div class="col-lg-12">
@@ -80,7 +98,7 @@
                                                     edit
                                                 </span>
                                             </a>
-                                            <button type="button" class="btn btn-link p-0">
+                                            <button type="button" class="btn-delete bg-white" class="btn btn-link p-0" data-reservation-id="<?= $data['id_pesanan'] ?>">
                                                 <span class="material-symbols-outlined text-danger">
                                                     delete
                                                 </span>
@@ -99,6 +117,27 @@
                 </table>
             </div>
         </div>
+        <!-- Modal -->
+        <form action="" method="post">
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="deleteModalLabel">Confirm Deletion</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this item? This action cannot be undone.
+                            <input type="hidden" name="reservation_id" id="reservationId">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </main>
 
     <?php include 'partials/footer.php' ?>
@@ -108,6 +147,9 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="./assets/js/reservations.js"></script>
 </body>
 
 </html>

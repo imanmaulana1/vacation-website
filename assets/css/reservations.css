@@ -5,3 +5,7 @@ main {
 .section-title {
   font-family: 'Dancing Script', cursive;
 }
+
+.btn-delete {
+  border: none !important;
+}
