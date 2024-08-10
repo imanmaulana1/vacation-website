@@ -57,6 +57,7 @@
                     </thead>
                     <tbody class="table-group-divider">
                         <?php if (isset($datas) && is_iterable($datas)): ?>
+                            <?php $i = 1; ?>
                             <?php foreach ($datas as $data): ?>
                                 <tr>
                                     <td scope="row"><?= $i ?></td>
@@ -87,6 +88,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <?php $i++; ?>
                             <?php endforeach; ?>
                         <?php else: ?>
                             <tr>

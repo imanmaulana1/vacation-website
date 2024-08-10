@@ -8,13 +8,10 @@ if (!$result) {
     die("Query failed: " . mysqli_error($conn));
 }
 
-
 $datas = [];
-$i = 0;
 
 while ($data = mysqli_fetch_assoc($result)) {
     $datas[] = $data;
-    $i++;
 }
 
 function formatRupiah($number)
