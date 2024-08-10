@@ -28,7 +28,7 @@
     <?php include 'partials/header.php' ?>
 
     <main>
-        <div class="container">
+        <div class="container pb-5">
             <h1 class="text-center py-5">Confirm your <span class="text-primary">Reservation</span></h1>
             <form action="booking.php" method="POST" id="reservationForm">
                 <div class="row g-4">
@@ -72,7 +72,7 @@
                                                         </span>
                                                     </div>
                                                     <div>
-                                                        <h3 class="fs-5 mb-1">Transportasi</h3>
+                                                        <h3 class="fs-5 mb-1">Transportation Service</h3>
                                                         <p class="mb-0 fw-bold">Rp. 1.200.000<span class="text-muted">/orang</span></p>
                                                     </div>
                                                 </div>
@@ -92,7 +92,7 @@
                                                         </span>
                                                     </div>
                                                     <div>
-                                                        <h3 class="fs-5 mb-1">Penginapan</h3>
+                                                        <h3 class="fs-5 mb-1">Accommodation Service</h3>
                                                         <p class="mb-0 fw-bold">Rp. 1.000.000<span class="text-muted">/orang</span></p>
                                                     </div>
                                                 </div>
@@ -111,7 +111,7 @@
                                                         </span>
                                                     </div>
                                                     <div>
-                                                        <h3 class="fs-5 mb-1">Makanan</h3>
+                                                        <h3 class="fs-5 mb-1">Meal Service</h3>
                                                         <p class="mb-0 fw-bold">Rp. 500.000<span class="text-muted">/orang</span></p>
                                                     </div>
                                                 </div>
@@ -190,7 +190,7 @@
                         </section>
                     </div>
                     <div class="col-12 col-lg-5">
-                        <section class="bg-white p-4 h-100 rounded-3 shadow">
+                        <section class="bg-white p-4 h-100 rounded-3 shadow height-max-content">
                             <h2 class="fs-3 mb-3">Summary</h2>
                             <div class="total-wrapper">
                                 <p class="fs-6">Your reservation summary:</p>

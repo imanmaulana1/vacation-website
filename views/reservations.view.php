@@ -26,7 +26,77 @@
     <?php include 'partials/header.php' ?>
 
     <main>
-        <h1>Reservations</h1>
+        <div class="container px-2 px-lg-5">
+            <div class="row pt-5">
+                <div class="col-lg-12">
+                    <h1 class="section-title text-primary text-center">Reservations</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-2 px-lg-5 pb-5">
+            <div class="table-responsive table-dark table-hover mb-5">
+                <table class="table caption-top">
+                    <caption>List of users</caption>
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">Booking Date</th>
+                            <th scope="col">Duration (days)</th>
+                            <th scope="col">Package ID</th>
+                            <th scope="col">Accomodation Service</th>
+                            <th scope="col">Transportation Service</th>
+                            <th scope="col">Meal Service</th>
+                            <th scope="col">Guests</th>
+                            <th scope="col">Package Price</th>
+                            <th scope="col">Total Price</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <?php if (isset($datas) && is_iterable($datas)): ?>
+                            <?php foreach ($datas as $data): ?>
+                                <tr>
+                                    <td scope="row"><?= $i ?></td>
+                                    <td scope="row"><?= $data['nama_pemesan'] ?></td>
+                                    <td scope="row"><?= $data['nomor_hp'] ?></td>
+                                    <td scope="row"><?= $data['tanggal_mulai_wisata'] ?></td>
+                                    <td scope="row"><?= $data['tanggal_pesanan'] ?></td>
+                                    <td scope="row" class="text-center"><?= $data['durasi_wisata'] ?></td>
+                                    <td scope="row" class="text-center"><?= $data['id_paket_wisata'] ?></td>
+                                    <td scope="row" class="text-center"><?= $data['layanan_penginapan']  == 1 ? "Yes" : "No"  ?></td>
+                                    <td scope="row" class="text-center"><?= $data['layanan_transportasi']  == 1 ? "Yes" : "No"  ?></td>
+                                    <td scope="row" class="text-center"><?= $data['layanan_makanan']  == 1 ? "Yes" : "No"  ?></td>
+                                    <td scope="row" class="text-center"><?= $data['jumlah_peserta'] ?></td>
+                                    <td scope="row"><?= formatRupiah($data['harga_paket']) ?></td>
+                                    <td scope="row"><?= formatRupiah($data['jumlah_tagihan']) ?></td>
+                                    <td scope="row">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="#">
+                                                <span class="material-symbols-outlined text-warning">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <button type="button" class="btn btn-link p-0">
+                                                <span class="material-symbols-outlined text-danger">
+                                                    delete
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="14" class="text-center">No data available</td>
+                            </tr>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
 
     <?php include 'partials/footer.php' ?>

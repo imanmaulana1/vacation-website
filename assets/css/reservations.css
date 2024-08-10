@@ -1,4 +1,7 @@
 main {
   background-color: #f5f5f5;
-  min-height: 200vh;
+}
+
+.section-title {
+  font-family: 'Dancing Script', cursive;
 }
