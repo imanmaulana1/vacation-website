@@ -67,7 +67,7 @@
                         <span class="material-symbols-outlined text-muted">
                             home
                         </span>
-                        <p>New York, NY 10012, US</p>
+                        <p>Bandung, BDG 40221, ID</p>
                     </div>
                     <div class="d-flex items-center gap-2">
                         <span class="material-symbols-outlined text-muted">
@@ -79,7 +79,7 @@
                         <span class="material-symbols-outlined text-muted">
                             support_agent
                         </span>
-                        <p>+ 01 234 567 88</p>
+                        <p>+ 62 234 567 88</p>
                     </div>
                 </div>
             </div>

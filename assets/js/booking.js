@@ -34,10 +34,7 @@ $(document).ready(function () {
 
   // Calculate and update subtotal and total when 'Count' button is clicked
   $('#count').on('click', (e) => {
-    e.preventDefault();
-
     if (!validateCheckboxes()) {
-      e.preventDefault();
       alert('Please select at least one package.');
     }
 
@@ -50,6 +47,16 @@ $(document).ready(function () {
   // Reset subtotal and total values when reset button is clicked
   $('#resetButton').on('click', () => {
     $('#subTotal, #hiddenSubTotal, #total, #hiddenTotal').val(0);
+
+    $('input[name="daterange"]').data('daterangepicker').setStartDate(moment());
+    $('input[name="daterange"]').data('daterangepicker').setEndDate(moment());
+    $('#startDate-hidden').val('');
+
+    $('#startDate').text('');
+    $('#end-date').text('');
+
+    $('#duration').val('');
+    $('#duration-text').text('');
   });
 
   //  Remove attribut required from class .package-checkbox if user pick one of packages
@@ -118,6 +125,16 @@ $(document).ready(function () {
     return $('.package-checkbox:checked').length > 0;
   }
 
+  //  Set disabled button decrement when value equals 1
+  function updateGuestCountButtons() {
+    let currentValue = parseInt($('#guestCount').val());
+    if (currentValue <= 1) {
+      $('#btn-down').attr('disabled', true);
+    } else {
+      $('#btn-down').removeAttr('disabled');
+    }
+  }
+
   function updateSubTotal() {
     let duration = parseInt($('#duration').val()) || 0;
     let res = getSubTotal(
@@ -135,16 +152,6 @@ $(document).ready(function () {
     let guestCount = parseInt($('#guestCount').val()) || 1;
     let total = subTotal * guestCount;
     $('#total, #hiddenTotal').val(total);
-  }
-
-  //  Set disabled button decrement when value equals 1
-  function updateGuestCountButtons() {
-    let currentValue = parseInt($('#guestCount').val());
-    if (currentValue <= 1) {
-      $('#btn-down').attr('disabled', true);
-    } else {
-      $('#btn-down').removeAttr('disabled');
-    }
   }
 
   window.incrementGuestCount = function () {

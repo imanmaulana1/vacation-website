@@ -192,11 +192,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mt-5">
-                                    <div class="col-12 d-flex justify-content-end">
-                                        <button type="button" id="count" name="count" class="btn btn-info text-white">Hitung</button>
-                                    </div>
-                                </div>
                             </div>
                         </section>
                     </div>
@@ -220,7 +215,8 @@
                                             <input type="hidden" id="hiddenTotal" name="hiddenTotal" value="0">
                                             <div class="col-12 d-flex justify-content-end mt-5">
                                                 <button type="reset" name="reset" id="resetButton" class="btn btn-danger text-white me-2">Reset</button>
-                                                <button type="submit" name="payment" class="btn btn-primary text-white">Payment</button>
+                                                <button type="button" name="count" id="count" class="btn btn-info text-white me-2">Calculate</button>
+                                                <button type="submit" name="payment" id="payment" class="btn btn-primary text-white">Payment</button>
                                             </div>
                                         </div>
                                     </div>

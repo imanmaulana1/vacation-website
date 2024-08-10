@@ -74,7 +74,7 @@
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                        <?php if (isset($datas) && is_iterable($datas)): ?>
+                        <?php if (!empty($datas) && is_iterable($datas)): ?>
                             <?php $i = 1; ?>
                             <?php foreach ($datas as $data): ?>
                                 <tr>
