@@ -1,0 +1,23 @@
+:root {
+  --ff-poppins: 'Poppins', sans-serif;
+  --ff-dancing: 'Dancing Script', cursive;
+  --ff-bebas: 'Bebas Neue', sans-serif;
+}
+
+body {
+  font-family: var(--ff-poppins);
+}
+
+.logo {
+  font-family: var(--ff-dancing);
+  font-size: 2.5rem;
+}
+
+.material-symbols-outlined {
+  font-size: 1.375rem;
+}
+
+.social-media-icons .footer-icon {
+  width: 24px;
+  height: 24px;
+}
