@@ -57,6 +57,17 @@
                                             <input type="text" class="form-control" id="phone" name="phone" aria-label="phone" required>
                                         </div>
                                     </div>
+                                    <div class="col-12 col-md-6 mb-4">
+                                        <label for="package" class="form-label">Select Destination</label>
+                                        <select class="form-select" name="package" id="package" aria-label="Default select example" required>
+                                            <option value="" selected disabled>Choose your destination</option>
+                                            <option value="1">Maldives</option>
+                                            <option value="2">Grand Canyon</option>
+                                            <option value="3">Great Barrier Reef</option>
+                                            <option value="4">Santorini</option>
+                                            <option value="5">Machu Picchu</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <p class="fs-5 mt-4">Select Packages:</p>
                                 <div class="packages">

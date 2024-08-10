@@ -9,6 +9,7 @@ if (isset($_POST['payment'])) {
     $name = "{$_POST['firstName']} {$_POST['lastName']}";
     $email = $_POST['email'];
     $phone = $_POST['phone'];
+    $packageId = $_POST['package'];
     $serviceMakanan = isset($_POST['makanan']) ? 1 : 0;
     $serviceTransportasi = isset($_POST['transportasi']) ? 1 : 0;
     $servicePenginapan = isset($_POST['penginapan']) ? 1 : 0;
@@ -26,7 +27,7 @@ if (isset($_POST['payment'])) {
     // Query Insert Data
     $query = "INSERT INTO pesanan
                 VALUES 
-            ('', '$name', '$phone', '$startDate', '$orderDateTime', '$duration', '1', '$servicePenginapan', '$serviceTransportasi', '$serviceMakanan', '$guestCount', '$subTotal', '$total')";
+            ('', '$name', '$phone', '$startDate', '$orderDateTime', '$duration', '$packageId', '$servicePenginapan', '$serviceTransportasi', '$serviceMakanan', '$guestCount', '$subTotal', '$total')";
 
     $result = mysqli_query($conn, $query);
 

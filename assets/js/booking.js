@@ -91,13 +91,27 @@ $(document).ready(function () {
     return guest * subTotal;
   }
 
-  // Event listener form submission
+  // Event listener form
   $('#reservationForm').on('submit', function (e) {
     if (!validateCheckboxes()) {
-      e.preventDefault(); // Mencegah form disubmit
       alert('Please select at least one package.');
+      e.preventDefault(); // Prevent form submission
+      return;
+    }
+
+    if (!validateSelectOption() === '') {
+      alert('Please choose a destination.');
+      e.preventDefault(); // Prevent form submission
+      return;
     }
   });
+
+  // Validate select option
+  function validateSelectOption() {
+    let select = $('#package');
+
+    return select.val();
+  }
 
   // Validate checkbox packages
   function validateCheckboxes() {
