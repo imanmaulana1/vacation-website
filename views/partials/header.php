@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg py-4 nav">
+    <nav class="navbar navbar-expand-lg py-4 nav bg-white">
         <div class="container">
             <a class="navbar-brand fw-bold logo" href="index.php">Vacay<span class="text-primary">Net</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

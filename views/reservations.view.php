@@ -30,16 +30,30 @@
             <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
                 <div id="liveToast" class="toast custom-toast bg-white" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="toast-header">
-                        <span class="material-symbols-outlined me-2 <?= $_GET['message'] == 'deleted successfully' ? 'text-success' : 'text-danger' ?>">
-                            <?= $_GET['message'] == 'deleted successfully' ? 'check_circle' : 'error' ?>
+                        <?php
+                        $message = $_GET['message'];
+                        $isSuccess = in_array($message, ['deleted successfully', 'updated successfully']);
+                        ?>
+                        <span class="material-symbols-outlined me-2 <?= $isSuccess ? 'text-success' : 'text-danger' ?>">
+                            <?= $isSuccess ? 'check_circle' : 'error' ?>
                         </span>
-                        <strong class="me-auto <?= $_GET['message'] == 'deleted successfully' ? 'text-success' : 'text-danger' ?>">
-                            <?= $_GET['message'] == 'deleted successfully' ? 'Success' : 'Failed' ?>
+                        <strong class="me-auto <?= $isSuccess ? 'text-success' : 'text-danger' ?>">
+                            <?= $isSuccess ? 'Success' : 'Failed' ?>
                         </strong>
                         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                     </div>
                     <div class="toast-body">
-                        <?= $_GET['message'] == 'deleted successfully' ? 'Item deleted successfully!' : 'Item deletion failed!' ?>
+                        <?php
+                        if ($message == 'deleted successfully') {
+                            echo 'Item deleted successfully!';
+                        } elseif ($message == 'updated successfully') {
+                            echo 'Item updated successfully!';
+                        } elseif ($message == 'deleted failed') {
+                            echo 'Item deletion failed!';
+                        } elseif ($message == 'update failed') {
+                            echo 'Item update failed!';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -93,8 +107,8 @@
                                     <td scope="row"><?= formatRupiah($data['jumlah_tagihan']) ?></td>
                                     <td scope="row">
                                         <div class="d-flex align-items-center gap-2">
-                                            <a href="#">
-                                                <span class="material-symbols-outlined text-warning">
+                                            <a href="edit-reservation.php?id=<?= $data['id_pesanan'] ?>">
+                                                <span class=" material-symbols-outlined text-warning">
                                                     edit
                                                 </span>
                                             </a>
@@ -118,7 +132,7 @@
             </div>
         </div>
         <!-- Modal -->
-        <form action="" method="post">
+        <form action="reservations.php" method="post">
             <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
