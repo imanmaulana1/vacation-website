@@ -26,13 +26,13 @@
     <?php include 'partials/header.php' ?>
 
     <main>
-        <?php if (isset($_GET['message'])): ?>
+        <?php if (isset($_GET['message']) ): ?>
             <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
                 <div id="liveToast" class="toast custom-toast bg-white" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="toast-header">
                         <?php
                         $message = $_GET['message'];
-                        $isSuccess = in_array($message, ['deleted successfully', 'updated successfully']);
+                        $isSuccess = in_array($message, ['deleted successfully', 'updated successfully', 'export_success']);
                         ?>
                         <span class="material-symbols-outlined me-2 <?= $isSuccess ? 'text-success' : 'text-danger' ?>">
                             <?= $isSuccess ? 'check_circle' : 'error' ?>
@@ -52,6 +52,8 @@
                             echo 'Item deletion failed!';
                         } elseif ($message == 'update failed') {
                             echo 'Item update failed!';
+                        } elseif ($message == 'export_success') {
+                            echo 'File has been successfully saved to the server!';
                         }
                         ?>
                     </div>
@@ -62,6 +64,11 @@
             <div class="row pt-5">
                 <div class="col-lg-12">
                     <h1 class="section-title text-primary text-center">Reservations</span></h1>
+                </div>
+                <div class="text-end">
+                    <form action="reservations.php" method="POST">
+                        <button id="printButton" name="export" class="btn btn-primary">Print to Spreadsheet</button>
+                    </form>
                 </div>
             </div>
         </div>

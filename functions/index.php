@@ -14,6 +14,7 @@ while ($data = mysqli_fetch_assoc($result)) {
     $datas[] = $data;
 }
 
+
 if (isset($_POST['edit'])) {
     $id = (int)$_POST['id'];
     $name = $_POST['name'];
