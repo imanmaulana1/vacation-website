@@ -4,6 +4,10 @@
   --ff-bebas: 'Bebas Neue', sans-serif;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--ff-poppins);
 }
@@ -20,4 +24,17 @@ body {
 .social-media-icons .footer-icon {
   width: 24px;
   height: 24px;
+}
+
+.hero {
+  width: 100%;
+  background-image: url('./assets/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }

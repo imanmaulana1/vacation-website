@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg py-4 nav bg-white">
+    <nav class="navbar navbar-expand-lg py-4 nav">
         <div class="container">
             <a class="navbar-brand fw-bold logo" href="index.php">Vacay<span class="text-primary">Net</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,16 +8,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="index.php#footer">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Package</a>
+                        <a class="nav-link" href="index.php#packages">Package</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Destination</a>
+                        <a class="nav-link" href="index.php#destination">Destination</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a class="nav-link" href="index.php#gallery">Gallery</a>
                     </li>
                 </ul>
                 <div class="d-flex gap-2" role="cta">

@@ -3,6 +3,10 @@
 $subTotal = 0;
 $total = 0;
 
+// Get query parameter from url
+$idPackage = isset($_GET['destination']) ? $_GET['destination'] : '';
+
+// Add data to database
 if (isset($_POST['payment'])) {
 
     // Get value from input

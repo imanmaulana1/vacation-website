@@ -39,8 +39,155 @@
             </div>
         </div>
     <?php endif; ?>
-    <main>
+    <main class="bg-white">
+        <section id="hero">
+            <div class="container">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner rounded" style="height: 500px;">
+                        <div class="carousel-item active">
+                            <img src="./assets/images/hero.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/hero-2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/hero-3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/hero-4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/hero-5.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="destination" class="my-5">
+            <div class="container">
+                <div class="row my-4 g-4 g-lg-0">
+                    <h2 class="section-title text-primary">Destination</h2>
+                    <div class="col-12 col-md-8 mb-4 me-lg-5">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="./assets/images/hero-2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Maldives</h5>
+                                        <p class="card-text">Experience the pristine beaches and crystal-clear waters of the Maldives.</p>
+                                        <a href="booking.php?destination=1" class="btn btn-primary">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="./assets/images/hero-5.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Macchu Picchu</h5>
+                                        <p class="card-text">Discover the ancient Incan city of Machu Picchu, nestled high in the Andes Mountains.</p>
+                                        <a href="booking.php?destination=5" class="btn btn-primary">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="./assets/images/hero-4.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Santorini</h5>
+                                        <p class="card-text">Enjoy the iconic white-washed buildings of Santorini.</p>
+                                        <a href="booking.php?destination=4" class="btn btn-primary">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <h2>Video</h2>
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LCG9FM8FPKY?si=mdk-JIwfEDpbgO6_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="package my-5" id="packages">
+            <div class="container">
+                <h2 class="section-title text-primary">Packages</h2>
+                <div class="card-deck mb-3 text-center">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Accomodation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title pricing-card-title">Rp. 1.000.000 <small class="text-muted">/ orang</small></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Transportation</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title pricing-card-title">Rp. 1.200.000 <small class="text-muted">/ orang</small></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-normal">Meals</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title pricing-card-title">Rp. 500.000 <small class="text-muted">/ orang</small></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="gallery" class="mb-5">
+            <div class="container">
+                <h2 class="section-title text-primary">Gallery</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img
+                            src="./assets/images/gallery2.png"
+                            class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Wintry Mountain Landscape" />
+                    </div>
 
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                            src="./assets/images/gallery3.png"
+                            class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Mountains in the Clouds" />
+
+                        <img
+                            src="./assets/images/gallery4.png"
+                            class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Boat on Calm Water" />
+                    </div>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                            src="./assets/images/gallery5.png"
+                            class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Waves at Sea" />
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <?php include 'partials/footer.php' ?>

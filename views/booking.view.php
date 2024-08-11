@@ -60,12 +60,12 @@
                                     <div class="col-12 col-md-6 mb-4">
                                         <label for="package" class="form-label">Select Destination</label>
                                         <select class="form-select" name="package" id="package" aria-label="Default select example" required>
-                                            <option value="" selected disabled>Choose your destination</option>
-                                            <option value="1">Maldives</option>
-                                            <option value="2">Grand Canyon</option>
-                                            <option value="3">Great Barrier Reef</option>
-                                            <option value="4">Santorini</option>
-                                            <option value="5">Machu Picchu</option>
+                                            <option value="" <?= $idPackage == '' ? 'selected' : '' ?> disabled>Choose your destination</option>
+                                            <option value="1" <?= $idPackage == 1 ? 'selected' : '' ?>>Maldives</option>
+                                            <option value="2" <?= $idPackage == 2 ? 'selected' : '' ?>>Grand Canyon</option>
+                                            <option value="3" <?= $idPackage == 3 ? 'selected' : '' ?>>Great Barrier Reef</option>
+                                            <option value="4" <?= $idPackage == 4 ? 'selected' : '' ?>>Santorini</option>
+                                            <option value="5" <?= $idPackage == 5 ? 'selected' : '' ?>>Machu Picchu</option>
                                         </select>
                                     </div>
                                 </div>
